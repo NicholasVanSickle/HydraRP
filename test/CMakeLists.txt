@@ -1,0 +1,8 @@
+file(GLOB TESTS tst_*.cpp)
+foreach( TEST ${TESTS} )
+    get_filename_component(TESTNAME ${TEST} NAME_WE)
+    add_executable(${TESTNAME} ${TEST})
+    qt5_use_modules(${TESTNAME} Widgets Xml Test)
+    target_link_libraries (${TESTNAME} libhydra)
+endforeach (TEST)
+include_directories(..)

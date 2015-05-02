@@ -1,0 +1,6 @@
+file(GLOB SRC *.cpp)
+file(GLOB HEADER *.h)
+add_definitions(-DLIBHYDRA_BUILD)
+add_library(libhydra SHARED ${SRC} ${HEADER})
+include_directories(..)
+qt5_use_modules(libhydra Widgets Xml)

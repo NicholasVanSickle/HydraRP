@@ -1,0 +1,5 @@
+file(GLOB SRC *.cpp)
+add_executable(Hydra2 ${SRC})
+include_directories(..)
+qt5_use_modules(Hydra2 Widgets Xml)
+target_link_libraries (Hydra2 libhydra)
