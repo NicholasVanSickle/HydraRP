@@ -5,6 +5,9 @@ project(Hydra2)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
+find_package(Boost 1.46.0 REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+
 set(QTCOMPONENTS Widgets Xml Test)
 foreach(QTCOMPONENT ${QTCOMPONENTS})
     find_package(Qt5${QTCOMPONENT} REQUIRED)
